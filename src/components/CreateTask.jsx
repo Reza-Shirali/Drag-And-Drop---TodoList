@@ -32,16 +32,16 @@ function CreateTask({ tasks, setTasks }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex items-center flex-col gap-2 sm:gap-0 sm:flex-row">
       <input
         value={task.name}
         type="text"
-        className="border-2 outline-none font-black text-lg border-yellow-500 bg-transparent rounded-md mr-4 h-12 w-96 px-2"
+        className="border-2 outline-none font-black text-lg border-yellow-500 bg-transparent rounded-md sm:mr-4 h-12 w-80 sm:w-96 px-2"
         onChange={(e) =>
           setTask({ ...task, id: uuidv4(), name: e.target.value })
         }
       />
-      <button className="relative top-1 bg-yellow-400 font-black hover:bg-yellow-300 transition-all ease-in-out duration-200 delay-75 rounded-md p-2 text-3xl ">
+      <button className="md:relative w-80 sm:w-auto bg-yellow-400 font-black hover:bg-yellow-300 transition-all ease-in-out duration-200 delay-75 rounded-md p-2 text-3xl ">
         create
       </button>
     </form>

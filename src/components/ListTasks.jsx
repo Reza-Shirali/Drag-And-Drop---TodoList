@@ -22,7 +22,7 @@ function ListTasks({ tasks, setTasks }) {
   const statuses = ["todo", "inProgress", "closed"];
 
   return (
-    <div className="flex gap-16">
+    <div className="flex gap-16 flex-col lg:flex-row">
       {statuses.map((status, index) => (
         <Section
           key={index}
@@ -81,7 +81,7 @@ const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
 
   return (
     <div
-      className={`w-64 p-2 ${
+      className={`min-w-[360px] lg:min-w-64 p-2 ${
         isOver
           ? `${bg} bg-opacity-25 rounded-md transition-all ease-in-out `
           : ""

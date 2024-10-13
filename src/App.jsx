@@ -17,7 +17,7 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>  
       <Toaster />
-      <div className='bg-teal-800 w-screen h-screen flex flex-col items-center pt-10 gap-16'>
+      <div className='bg-teal-800 w-screen min-h-screen flex flex-col items-center pt-10 gap-16'>
         <Header/>
         <CreateTask tasks={tasks} setTasks={setTasks} />
         <ListTasks tasks={tasks} setTasks={setTasks} />
