@@ -123,7 +123,7 @@ const Header = ({ text, bg, count }) => {
   );
 };
 
-const Task = ({ task, tasks, setTasks, index, status,bg }) => {
+const Task = ({ task, tasks, setTasks, index, status, bg }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "task",
     item: { id: task.id, index, status },
